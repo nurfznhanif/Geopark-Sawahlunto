@@ -35,7 +35,7 @@
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Submit</button>
-                            <a href="/user" class="btn btn-secondary">Cancel</a>
+                            <a href="/dashboard/user" class="btn btn-secondary">Cancel</a>
                         </div>
                     </form><!-- End No Labels Form -->
 

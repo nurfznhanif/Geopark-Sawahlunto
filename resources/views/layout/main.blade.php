@@ -6,7 +6,7 @@
     <!-- Basic Page Needs
 ================================================== -->
     <meta charset="utf-8">
-    <title>IQ PRIMATECH</title>
+    <title>GEOPARK SAWAHLUNTO</title>
 
     <!-- Mobile Specific Metas
 ================================================== -->
@@ -18,7 +18,7 @@
 
     <!-- Favicon
 ================================================== -->
-    <link rel="icon" type="image/png" href="{{asset('Template')}}/images/favicon.png">
+    <link rel="icon" type="image/png" href="/assets/img/logosawahlunto.png">
 
     <!-- CSS
 ================================================== -->
@@ -38,6 +38,90 @@
     <link rel="stylesheet" href="{{asset('Template')}}/css/style.css">
     <!-- wa floating btn-->
     <link rel="stylesheet" href="{{asset('Template')}}/css/wabtn.css">
+    <style>
+        /* Tambahan Header */
+        .nav-link {
+            color: #ffffff;
+        }
+
+        .caption_overlay {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            color: white;
+            z-index: 100;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .animated-title {
+            font-family: inherit;
+            position: relative;
+            height: 100px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .caption_overlay_title {
+            font-size: 70px;
+            font-weight: bold;
+        }
+
+        .caption_overlay_subtitle {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .text-top {
+            height: 45%;
+        }
+
+        .my-10 {
+            margin-top: 6.25rem !important;
+            margin-bottom: 6.25rem !important;
+        }
+
+        .container-shortcut {
+            display: inline-block;
+        }
+
+        .group-shortcut {
+            margin-right: 1.5em;
+            margin-left: 1.5em;
+        }
+
+        .btn-shortcut {
+            height: 100px;
+            width: 100px;
+            padding: 13px 7px;
+            position: relative;
+            color: white;
+            text-decoration: none;
+            border-radius: 120px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .testing {
+            border: 2px solid green;
+            background: red;
+        }
+
+        .padding-section {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .image {
+            border-radius: 20px;
+        }
+    </style>
 
 
 </head>
@@ -48,13 +132,12 @@
         <header id="header" class="header-two">
             <div class="site-navigation">
                 <div class="row mr-4 ml-4">
-
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-light p-0">
 
                             <div class="logo">
                                 <a class="d-block" href="/">
-                                    <img loading="lazy" src="{{asset('Template')}}/images/logo-gh-test.png" alt="Constra">
+                                    <img loading="lazy" src="{{asset('Template')}}/images/logosawahlunto.png" alt="Constra">
                                 </a>
                             </div><!-- logo end -->
 
@@ -69,19 +152,15 @@
 
                                     <li class="nav-item"><a class="nav-link" href="/tentang">Tentang kami</a></li>
 
-
-                                    <li class="nav-item"><a class="nav-link" href="/artikel">Artikel</a></li>
-
                                     <li class="nav-item dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Informasi <i class="fa fa-angle-down"></i></a>
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="/dokter/profil">Members</a></li>
+                                            <li><a href="/kajian">Kajian</a></li>
                                             <li><a href="/galeri">Galeri</a></li>
-                                            <li><a href="/karir">Karir</a></li>
                                             <li><a href="/partnership">Our Partners</a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="/e-library">E-Library</a></li>
+
                                 </ul>
                             </div>
                         </nav>
@@ -99,127 +178,101 @@
         @yield('content')
 
 
-        <!-- floating wa -->
+    </div>
 
-        <div class="floating-container" id="tooltip">
-            <img src="{{asset('Template')}}/images/icon-customer.png" class="floating-button text-dark">
-            <div class="element-container">
-
-                <span class="float-element tooltip-left" id="tooltip-linktree">
-                    <a href="#"><i class="fas fa-link"></i></a>
-                    <span id="tooltipText-linktree">Linktree</span>
-                </span>
-                <span class="float-element" id="tooltip-pendaftaran">
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    <span id="tooltipText-pendaftaran">Pendaftran Online</span>
-                </span>
-                <span class="float-element" id="tooltip-kritik">
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    <span id="tooltipText-kritik">Kritik & Saran</span>
-                </span>
-            </div>
-            <span id="tooltipText">Hubungi kami</span>
-        </div>
-
-        <footer id="footer" class="footer">
-            <div class="footer-main">
-                <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-lg-4 col-md-6 footer-widget footer-about">
-                            <h3 class="widget-title">Tentang Kami</h3>
-                            <img loading="lazy" width="200px" class="footer-logo" src="{{ asset('Template') }}/images/logo-gh-test-white.png" alt="Constra">
-                            <p class="text-white">IQ PRIMATECH adalah salah satu Study Club mahasiswa Teknik Informatika Universitas Islam Riau yang berfokus pada bidang programming.</p>
-                            <a href="/tentang" class="text-white">Selengkapnya</a>
-                            <br>
-                            <hr>
-                            <p class="text-white">Temukan kami:</p>
-                            <div class="footer-social">
-                                <ul>
-                                    <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f text-white"></i></a></li>
-                                    <li><a href="https://www.youtube.com/@iqprimatech" aria-label="Youtube"><i class="fab fa-youtube text-white"></i></a>
-                                    </li>
-                                    <li><a href="https://www.instagram.com/iq.primatech/" aria-label="Instagram"><i class="fab fa-instagram text-white"></i></a></li>
-                                </ul>
-                            </div><!-- Footer social end -->
-                        </div><!-- Col end -->
-
-                        <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
-                            <h3 class="widget-title">Forum programming</h3>
-                            <div class="working-hours text-white">
-                                Memfasilitasi pertukaran informasi mengenai perkembangan dan penerapan teknologi
-                                modern, dan memberikan kesempatan dan relasi kepada mahasiswa dan masyarakat umum.
-                            </div>
-                        </div><!-- Col end -->
-
-                        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
-                            <h3 class="widget-title">Project</h3>
-                            <ul class="list-arrow">
-                                @foreach($lyn as $lyns)
-                                <li><a href="/services/detail/{{ $lyns->slug }}" class="text-white">{{ $lyns->poliklinik }} </a></li>
-                                @endforeach
-                                <li><a href="/services" class="text-white">Selengkapnya <i class="fas fa-arrow-right"></i></a></li>
+    <footer id="footer" class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-4 col-md-6 footer-widget footer-about">
+                        <h3 class="widget-title">Tentang Kami</h3>
+                        <img loading="lazy" width="200px" class="footer-logo" src="/assets/img/logosawahlunto.png" alt="Constra">
+                        <p class="text-white">Geopark Sawahlunto merupakan salah satu Geopark yang terletak di Daerah Sumatera Barat, Indonesia.</p>
+                        <a href="/tentang" class="text-white">Selengkapnya</a>
+                        <br>
+                        <hr>
+                        <p class="text-white">Temukan kami:</p>
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f text-white"></i></a></li>
+                                <li><a href="#" aria-label="Youtube"><i class="fab fa-youtube text-white"></i></a>
+                                </li>
+                                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram text-white"></i></a></li>
                             </ul>
-                        </div><!-- Col end -->
-                    </div><!-- Row end -->
-                </div><!-- Container end -->
-            </div><!-- Footer main end -->
+                        </div><!-- Footer social end -->
+                    </div><!-- Col end -->
 
-            <div class="copyright">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="copyright-info text-white text-center">
-                                <span>Copyright &copy; <script>
-                                        document.write(new Date().getFullYear())
-                                    </script>, IQ PRIMATECH</span>
-                            </div>
+                    <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+                        <h3 class="widget-title">Geoheritage</h3>
+                        <div class="working-hours text-white">
+                            Berdasarkan Peraturan Presiden Nomor 9 Tahun 2019 tentang Pengembangan Taman Bumi,
+                            Geopark (Taman Bumi) adalah sebuah wilayah geografi tunggal atau gabungan,
+                            yang memiliki Situs Warisan Geologi (Geosite) dan bentang alam yang bernilai,
+                            terkait aspek Warisan Geologi (Geoheritage).
                         </div>
-                    </div><!-- Row end -->
+                    </div><!-- Col end -->
 
-                    <!-- <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+
+                </div><!-- Row end -->
+            </div><!-- Container end -->
+        </div><!-- Footer main end -->
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="copyright-info text-white text-center">
+                            <span>Copyright &copy; <script>
+                                    document.write(new Date().getFullYear())
+                                </script>, GEOPARK SAWAHLUNTO</span>
+                        </div>
+                    </div>
+                </div><!-- Row end -->
+
+                <!-- <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
                         <button class="btn btn-primary" title="Back to Top">
                             <i class="fa fa-angle-double-up"></i>
                         </button>
                     </div> -->
 
-                </div><!-- Container end -->
-            </div><!-- Copyright end -->
-        </footer><!-- Footer end -->
+            </div><!-- Container end -->
+        </div><!-- Copyright end -->
+    </footer><!-- Footer end -->
 
 
-        <!-- Javascript Files
+    <!-- Javascript Files
   ================================================== -->
-        <!-- <script type="text/javascript">
+    <!-- <script type="text/javascript">
             window.onload = () => {
                 $('#onload').modal('show');
             }
         </script> -->
 
-        <!-- initialize jQuery Library -->
-        <script src="{{asset('Template')}}/plugins/jQuery/jquery.min.js"></script>
-        <!-- Bootstrap jQuery -->
-        <script src="{{asset('Template')}}/plugins/bootstrap/bootstrap.min.js" defer></script>
-        <!-- Slick Carousel -->
-        <script src="{{asset('Template')}}/plugins/slick/slick.min.js"></script>
-        <script src="{{asset('Template')}}/plugins/slick/slick-animation.min.js"></script>
-        <!-- Color box -->
-        <script src="{{asset('Template')}}/plugins/colorbox/jquery.colorbox.js"></script>
-        <!-- shuffle -->
-        <script src="{{asset('Template')}}/plugins/shuffle/shuffle.min.js" defer></script>
+    <!-- initialize jQuery Library -->
+    <script src="{{asset('Template')}}/plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap jQuery -->
+    <script src="{{asset('Template')}}/plugins/bootstrap/bootstrap.min.js" defer></script>
+    <!-- Slick Carousel -->
+    <script src="{{asset('Template')}}/plugins/slick/slick.min.js"></script>
+    <script src="{{asset('Template')}}/plugins/slick/slick-animation.min.js"></script>
+    <!-- Color box -->
+    <script src="{{asset('Template')}}/plugins/colorbox/jquery.colorbox.js"></script>
+    <!-- shuffle -->
+    <script src="{{asset('Template')}}/plugins/shuffle/shuffle.min.js" defer></script>
 
 
-        <!-- Google Map API Key-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
-        <!-- Google Map Plugin-->
+    <!-- Google Map API Key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+    <!-- Google Map Plugin-->
 
 
 
-        <script src="{{asset('Template')}}/plugins/google-map/map.js" defer></script>
+    <script src="{{asset('Template')}}/plugins/google-map/map.js" defer></script>
 
-        <!-- Template custom -->
-        <script src="{{asset('Template')}}/js/script.js"></script>
+    <!-- Template custom -->
+    <script src="{{asset('Template')}}/js/script.js"></script>
 
-        <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
 
     </div><!-- Body inner end -->
 </body>

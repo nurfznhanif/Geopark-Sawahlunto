@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Admin RSGH - {{ $tittle }} </title>
+    <title>Admin GEOPARK</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{asset('Template')}}/images/favicon.png" rel="icon">
+    <link href="/assets/img/logosawahlunto.png" rel="icon">
     <link href="{{asset('TemplateAdmin')}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -46,7 +46,7 @@
         <div class="d-flex align-items-center justify-content-between">
             <a href="#" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">RS Graha hermine</span>
+                <span class="d-none d-lg-block">GEOPARK SAWAHLUNTO</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
@@ -64,13 +64,6 @@
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
                             <h6>{{auth()->user()->nama}}</h6>
-                            @if(auth()->user()->role == '1')
-                            <span>Adminstrator</span>
-                            @elseif(auth()->user()->role == '2')
-                            <span>Social Media Admin</span>
-                            @else
-                            <span>Recruiter</span>
-                            @endif
                         </li>
 
 
@@ -102,24 +95,25 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link {{ ($tittle === "Dashboard") ? '' : 'collapsed'}}" href="/admin">
+                <a class="nav-link {{ ("Dashboard") ? '' : 'collapsed'}}" href="/admin">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
 
+            
+
             <li class="nav-item">
-                <a class="nav-link {{ ($tittle === "Dokter") ? '' : 'collapsed'}}" href="/dashboard/dokter">
-                    <i class="bi bi-people-fill"></i>
-                    <span>Kelola Dokter</span>
+                <a class="nav-link {{ ("Kelola User") ? '' : 'collapsed'}}" href="/dashboard/user">
+                    <i class="bi bi-person-badge-fill"></i>
+                    <span>Kelola User</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ ($tittle === "Kelola User") ? '' : 'collapsed'}}" href="/dashboard/user">
-                    <i class="bi bi-person-badge-fill"></i>
-                    <span>Kelola User</span>
-                </a>
+                <a class="nav-link" href="{{ route('destinasi') }}">
+                    <i class="fas fa-fw fa-map-marked-alt"></i>
+                    <span>Destinasi</span></a>
             </li>
 
             <li class="nav-item">
@@ -128,13 +122,8 @@
                 </a>
                 <ul id="forms-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="/dashboard/banner">
-                            <i class="bi bi-circle"></i><span>Kelola Banner</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/dashboard/yt">
-                            <i class="bi bi-circle"></i><span>YouTube Link Videos</span>
+                        <a href="/blog">
+                            <i class="bi bi-circle"></i><span>Kelola Informasi</span>
                         </a>
                     </li>
                     <li>
@@ -147,49 +136,9 @@
                             <i class="bi bi-circle"></i><span>Partnership</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="/blog">
-                            <i class="bi bi-circle"></i><span>RSGH Blog</span>
-                        </a>
-                    </li>
                 </ul>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#forms-nav2" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-house-fill"></i><span>Layanan</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="forms-nav2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="/dashboard/layanan-poliklinik">
-                            <i class="bi bi-circle"></i><span>Layanan Poliklinik</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/dashboard/fasilitas-layanan">
-                            <i class="bi bi-circle"></i><span>Fasilitas Layanan</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link {{ ($tittle === "Layanan") ? '' : 'collapsed'}}" href="/dashboard/layanan">
-                    <i class="bi bi-house-fill"></i>
-                    <span>Kelola layanan</span>
-                </a>
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link {{ ($tittle === "Lowongan") ? '' : 'collapsed'}}" href="/dashboard/lowongan">
-                    <i class="bi bi-bag-fill"></i>
-                    <span>Kelola Lowongan</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ ($tittle === "E-Library") ? '' : 'collapsed'}}" href="/dashboard/e-library">
-                    <i class="bi bi-book"></i>
-                    <span>E-Library</span>
-                </a>
-            </li>
-        </ul>
+            
 
     </aside><!-- End Sidebar-->
 

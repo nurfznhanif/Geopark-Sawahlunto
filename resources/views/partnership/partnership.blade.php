@@ -6,8 +6,8 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-lg">
-                <h2 class="section-title">IQ PRIMATECH</h2>
-                <h3 class="section-sub-title">Our Partnership</h3>
+                <h2 class="section-title">Geopark Sawahlunto</h2>
+                <h3 class="section-sub-title" style="color: green;">Our Partnership</h3>
             </div>
         </div>
         <div class="row">

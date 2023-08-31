@@ -16,7 +16,7 @@ class User_Controller extends Controller
     {
         return view('adminView/user', [
             'tittle' => 'Kelola User',
-            'users' => USer::all()
+            'users' => User::all()
         ]);
     }
     public function create()
@@ -36,7 +36,6 @@ class User_Controller extends Controller
         $validatedData = $request->validate(
             [
                 'nama' => 'required|max:255',
-                'role' => 'required',
                 'email' => 'required',
                 'username' => 'required|max:255|unique:users',
                 'password' => 'required|min:6|max:255',
@@ -49,7 +48,6 @@ class User_Controller extends Controller
 
         User::create([
             'nama' => $request->nama,
-            'role' => $request->role,
             'email' => $request->email,
             'username' => $request->username,
             'password' => Hash::make($request->password),

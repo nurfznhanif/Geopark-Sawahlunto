@@ -5,37 +5,6 @@
     <div class="pagetitle">
         <h1>Dashboard</h1>
     </div>
-    <div class="card">
-        <div class="card-body">
-            <div class="row mt-4">
-                <div class="col">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            @foreach($data as $banner)
-                            <div class="carousel-item active">
-                                <img src="{{ asset('images/banner-image/'.$banner->image) }}" class="d-block w-100" alt="...">
-                            </div>
-                            @endforeach
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <a href="/dashboard/banner" class="btn btn-primary mt-2">Buat Banner</a>
-        </div>
-    </div>
 
     <!-- Postingan saat ini -->
     <div class="col-md-6">
@@ -101,30 +70,6 @@
             </div>
         </div>
     </section>
-
-    <!-- data dokter -->
-    <div class="pagetitle">
-        <h1>Data Dokter</h1>
-    </div>
-    <div class="row">
-        @foreach($dokters as $dokter)
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ asset('storage/'.$dokter->image) }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{$dokter->nama}}</h5>
-                    <p class="card-text">Poliklinik: {{$dokter->poliklinik->poliklinik}}</p>
-                    <a href="/dashboard/dokter/{{$dokter->slug}}" class="btn btn-primary">Detail</a>
-                </div>
-            </div>
-        </div>
-        @endforeach
-        <div class="d-flex justify-content-start">
-            {{$dokters->links()}}
-        </div>
-    </div>
-
-
 </div>
 
 @endsection

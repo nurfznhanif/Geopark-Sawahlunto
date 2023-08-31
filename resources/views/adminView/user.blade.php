@@ -34,7 +34,6 @@
                             <tr>
                                 <th scope="col">Foto</th>
                                 <th scope="col">Nama</th>
-                                <th scope="col">Role</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Action</th>
@@ -45,15 +44,6 @@
                             <tr class="align-middle">
                                 <td><img src="{{ asset('images/user-image/'.$user->image) }}" alt="" width="100"></td>
                                 <td>{{ $user->nama }}</td>
-
-                                @if($user->role == '1')
-                                <td>Adminstrator</td>
-                                @elseif($user->role == '2')
-                                <td>Social Media Admin</td>
-                                @else
-                                <td>Recruiter</td>
-                                @endif
-
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->username }}</td>
                                 <td>

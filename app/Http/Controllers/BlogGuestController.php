@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\PostCategory;
 use App\Models\Layanan_poliklinik;
 
+
 class BlogGuestController extends Controller
 {
 
@@ -13,8 +14,7 @@ class BlogGuestController extends Controller
     {
         return view('blog/blogGuest', [
             'categories' => PostCategory::all(),
-            'posts' => Blog::latest()->filter(request(['search', 'category']))->paginate(3)->withQueryString(),
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'posts' => Blog::latest()->filter(request(['search', 'category']))->paginate(3)->withQueryString()
         ]);
     }
 

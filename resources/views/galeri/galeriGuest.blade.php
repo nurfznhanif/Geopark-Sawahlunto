@@ -6,15 +6,14 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-12">
-                <h2 class="section-title">IQ PRIMATECH</h2>
-                <h3 class="section-sub-title">Gallery</h3>
+                <h2 class="section-title">Geopark Sawahlunto</h2>
+                <h3 class="section-sub-title" style="color: green;">Gallery</h3>
             </div>
         </div>
         <!--/ Title row end -->
 
         <!-- galeri -->
         <div class="row">
-
             <div class="col-md-6">
                 <h4 class="widget-title">Filter Foto Berdasarkan</h4>
                 <form action="/galeri">
@@ -32,7 +31,6 @@
                 <div class="row shuffle-wrapper">
                     <div class="col-1 shuffle-sizer"></div>
                     @foreach($galeris as $galeri)
-
                     <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;Poliklinik&quot;]">
                         <div class="project-img-container">
                             <a class="gallery-popup" href="{{ asset('images/galeri-image/'.$galeri->image) }}" aria-label="project-img">
@@ -49,10 +47,8 @@
                         </div>
                     </div>
                     @endforeach
-
                 </div><!-- shuffle end -->
             </div>
-
         </div><!-- Content row end -->
         <div class="d-flex justify-content-center mt-4">
             {{$galeris->links()}}

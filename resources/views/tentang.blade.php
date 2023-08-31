@@ -28,10 +28,12 @@
 
             </div>
 
+            
             <div class="col-lg-6 mt-5 mt-lg-0">
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SSIt7b4hCeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <img width="560" height="315" src="assets/img/kajian/9.jpg" title="peta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
             </div>
+           
 
             <div class="col mt-4">
                 <h3 class="column-title">Sejarah Singkat</h3>
@@ -39,11 +41,11 @@
                     <div class="col">
                         <p>Donec non lobortis turpis. Etiam laoreet eros et justo sagittis, eget fermentum dolor lobortis. Proin dapibus enim eu tellus aliquam fermentum. Maecenas condimentum, purus quis dictum posuere, mi enim venenatis felis, eu semper metus orci vel nisl. Pellentesque ut metus eu purus feugiat gravida. Cras a aliquam purus, eu egestas tellus. Praesent convallis magna quis felis dictum posuere. </p>
                         <p>
-                        Quisque quis magna ac nisi facilisis finibus. Donec consectetur ligula eu quam accumsan lobortis. Sed interdum, elit in tempus porttitor, sapien dui ullamcorper risus, a bibendum libero orci ut ante. Nam sit amet aliquam eros. Phasellus aliquet felis nec ultrices malesuada.
+                            Quisque quis magna ac nisi facilisis finibus. Donec consectetur ligula eu quam accumsan lobortis. Sed interdum, elit in tempus porttitor, sapien dui ullamcorper risus, a bibendum libero orci ut ante. Nam sit amet aliquam eros. Phasellus aliquet felis nec ultrices malesuada.
                         </p>
 
                         <p>
-                        Nam congue elit a dolor eleifend, ut sagittis nulla malesuada. Pellentesque ut nisi sed ligula tincidunt dictum. Integer et velit ut lectus vestibulum faucibus vel ac eros. Nam bibendum, odio a imperdiet tincidunt, risus neque scelerisque ipsum, vel maximus tortor felis at est. Integer at facilisis tellus. Proin dapibus luctus arcu nec iaculis. Suspendisse potenti. Vivamus finibus vestibulum libero, id bibendum risus aliquam sit amet. In nec lacinia elit. Integer tristique ullamcorper felis a viverra. Sed nec fringilla libero. Proin sed ex et odio tincidunt interdum. Vivamus pellentesque eleifend ullamcorper. Sed maximus a mauris in tincidunt. Fusce luctus enim vel libero bibendum, vel facilisis urna laoreet.
+                            Nam congue elit a dolor eleifend, ut sagittis nulla malesuada. Pellentesque ut nisi sed ligula tincidunt dictum. Integer et velit ut lectus vestibulum faucibus vel ac eros. Nam bibendum, odio a imperdiet tincidunt, risus neque scelerisque ipsum, vel maximus tortor felis at est. Integer at facilisis tellus. Proin dapibus luctus arcu nec iaculis. Suspendisse potenti. Vivamus finibus vestibulum libero, id bibendum risus aliquam sit amet. In nec lacinia elit. Integer tristique ullamcorper felis a viverra. Sed nec fringilla libero. Proin sed ex et odio tincidunt interdum. Vivamus pellentesque eleifend ullamcorper. Sed maximus a mauris in tincidunt. Fusce luctus enim vel libero bibendum, vel facilisis urna laoreet.
                         </p>
                     </div>
                 </div>

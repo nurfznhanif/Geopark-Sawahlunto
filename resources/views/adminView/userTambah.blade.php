@@ -32,19 +32,6 @@
                             @enderror
                         </div>
                         <div class="col-md-6">
-                            <label for="role" class="form-label">Role User</label>
-                            <select name="role" class="form-select">
-                                <option value="1" @if (old('role')=='1' ) selected="selected" @endif>Adminstrator</option>
-                                <option value="2" @if (old('role')=='2' ) selected="selected" @endif>Social Media Admin</option>
-                                <option value="3" @if (old('role')=='3' ) selected="selected" @endif>Recruiter</option>
-                            </select>
-                            @error('role')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
-                        <div class="col-md-6">
                             <label for="e-mail" class="form-label">E-mail</label>
                             <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="masukan email" value="{{old('email')}}">
                             @error('email')
